@@ -1,0 +1,27 @@
+{
+    "name": "igonics/database-replacer",
+    "description": "Replaces Values in SQL Files",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ggordon",
+            "email": "ggordon@igonics.com"
+        }
+    ],
+    "autoload" : {
+		"psr-0" : {
+			"DbSqlReplacer\\" : "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"DbSqlReplacer\\Tests\\" : "tests/"
+		}
+	},
+    "require": {
+        
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.14"
+    }
+}
