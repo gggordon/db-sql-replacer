@@ -8,19 +8,21 @@
             "email": "ggordon@igonics.com"
         }
     ],
-    "autoload" : {
-		"psr-0" : {
-			"DbSqlReplacer\\" : "src/"
-		}
-	},
-	"autoload-dev" : {
-		"psr-4" : {
-			"DbSqlReplacer\\Tests\\" : "tests/"
-		}
-	},
-    "require": {
-        
+    "autoload": {
+        "psr-0": {
+            "DbSqlReplacer\\": "src/"
+        }
     },
+    "bin": [
+        "bin/db-sql-replace.php",
+        "bin/db-sql-replace"
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "DbSqlReplacer\\Tests\\": "tests/"
+        }
+    },
+    "require": {},
     "require-dev": {
         "phpunit/phpunit": "4.0.14"
     }
