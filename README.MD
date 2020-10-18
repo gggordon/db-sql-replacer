@@ -1,5 +1,5 @@
 
-# Database SQL Replacer
+# PHP SQL Replacer
 
 A utility to replace strings/values in `SQL`  files especially with **serialized** `php` values. Useful for database migrations/clones. 
 
@@ -8,7 +8,7 @@ A utility to replace strings/values in `SQL`  files especially with **serialized
 ## Command Line Usage
 
 ```
-./bin/db-sql-replace.php --input-file-path="./original.sql" --output-file-path="./updated.sql" --match="Original Text" --replace="New Text"
+./bin/php-sql-replacer --input-file-path="./original.sql" --output-file-path="./updated.sql" --match="Original Text" --replace="New Text"
 
 Required Options:
 --input-file-path   : Path of input file

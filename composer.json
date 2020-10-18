@@ -1,5 +1,5 @@
 {
-    "name": "gggordon/php-database-replacer",
+    "name": "gggordon/php-sql-replacer",
     "description": "Replaces Values in SQL Files",
     "license": "MIT",
     "authors": [
@@ -14,8 +14,8 @@
         }
     },
     "bin": [
-        "bin/php-sql-replace.php",
-        "bin/php-sql-replace"
+        "bin/php-sql-replacer.php",
+        "bin/php-sql-replacer"
     ],
     "autoload-dev": {
         "psr-4": {

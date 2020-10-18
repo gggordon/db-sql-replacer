@@ -19,7 +19,7 @@ if(count($options)!=count($longopts)){
     echo <<<EOD
 Php SQL Replacer Usage:
 
-php-sql-replace --input-file-path="./original.sql" --output-file-path="./updated.sql" --match="Original Text" --replace="New Text"
+php-sql-replacer --input-file-path="./original.sql" --output-file-path="./updated.sql" --match="Original Text" --replace="New Text"
 
 Replaces all occurrences of a value even in serialized values in a file
 
