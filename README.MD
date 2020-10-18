@@ -1,7 +1,19 @@
+[![Build Status (all)](https://img.shields.io/travis/com/gggordon/php-sql-replacer?style=flat-square)](https://travis-ci.com/gggordon/php-sql-replacer)
+[![Scrutinizer](https://img.shields.io/scrutinizer/g/gggordon/php-sql-replacer.svg?style=flat-square)](https://scrutinizer-ci.com/g/gggordon/php-sql-replacer/)
+[![Codecov](https://img.shields.io/codecov/c/github/gggordon/php-sql-replacer.svg?style=flat-square)](https://codecov.io/gh/gggordon/php-sql-replacer)
+[![License](https://poser.pugx.org/gggordon/php-sql-replacer/license?format=flat-square)](https://packagist.org/packages/gggordon/php-sql-replacer)
+[![Latest Stable Version](https://poser.pugx.org/gggordon/php-sql-replacer/version?format=flat-square)](https://packagist.org/packages/gggordon/php-sql-replacer)
+[![Latest Unstable Version](https://poser.pugx.org/gggordon/php-sql-replacer/v/unstable?format=flat-square)](//packagist.org/packages/gggordon/php-sql-replacer)
 
 # PHP SQL Replacer
 
 A utility to replace strings/values in `SQL`  files especially with **serialized** `php` values. Useful for database migrations/clones. 
+
+# Installation
+
+```
+composer require gggordon/php-sql-replacer
+```
 
 # Usage
 
