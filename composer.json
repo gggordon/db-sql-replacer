@@ -1,6 +1,6 @@
 {
     "name": "gggordon/php-sql-replacer",
-    "description": "Replaces Values in SQL Files",
+    "description": "Replace values in `SQL`  files especially with serialized php values. Useful for database migrations/clones.",
     "license": "MIT",
     "authors": [
         {
@@ -17,6 +17,9 @@
         "bin/php-sql-replacer.php",
         "bin/php-sql-replacer"
     ],
+    "scripts":{
+        "test": "vendor/bin/phpunit"
+    },
     "autoload-dev": {
         "psr-4": {
             "PhpSqlReplacer\\Tests\\": "tests/"
@@ -24,6 +27,6 @@
     },
     "require": {},
     "require-dev": {
-        "phpunit/phpunit": "4.0.14"
+        "phpunit/phpunit": "7.5.*"
     }
 }
