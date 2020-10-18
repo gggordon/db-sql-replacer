@@ -1,6 +1,6 @@
 <?php
 
-namespace DbSqlReplacer\Exceptions;
+namespace PhpSqlReplacer\Exceptions;
 
 class SqlReplacerException extends \Exception
 {

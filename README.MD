@@ -28,7 +28,7 @@ require_once dirname(__FILE__) . '/vendor/autoload.php';
 
 $contents ="insert into test (column1, column2) values ('I like trading','Another Value')";
 
-$replacer = new \DbSqlReplacer\DbSqlReplacer();
+$replacer = new \PhpSqlReplacer\PhpSqlReplacer();
 $updatedContents = $replacer->replaceValue(
     $contents, 
     "trading", 
@@ -51,7 +51,7 @@ If you are extracting the contents from a file:
 
 require_once dirname(__FILE__) . '/vendor/autoload.php';
 
-$replacer = new \DbSqlReplacer\DbSqlReplacer();
+$replacer = new \PhpSqlReplacer\PhpSqlReplacer();
 $updatedContents = $replacer->replaceValueFromFile("/path/to/original_file.sql", "trading", "butter", "/path/to/output_file.sql");
 
 echo $updatedContents;
@@ -62,6 +62,21 @@ insert into test (column1, column2) values ('I like butter','Another Value')
 ```
 and a new file created at `/path/to/output_file.sql`.
 
+# Tests
+
+Testing done using [`phpunit`](https://phpunit.de/)
+
+```
+phpunit
+```
+
+# Documentation
+
+Documentation Generated using [`phpdoc`](https://www.phpdoc.org/)
+
+```
+phpdoc -d ./src -t ./docs/api
+```
 
 # License
 

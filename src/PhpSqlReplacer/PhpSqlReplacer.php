@@ -1,10 +1,10 @@
 <?php
 
-namespace DbSqlReplacer;
+namespace PhpSqlReplacer;
 
-use DbSqlReplacer\Exceptions\SqlReplacerException;
+use PhpSqlReplacer\Exceptions\SqlReplacerException;
 
-class DbSqlReplacer
+class PhpSqlReplacer
 {
     public function extractSqlValuesFromFile($filePath, $patterToMatchFor=null, $includeColumnNames=false)
     {

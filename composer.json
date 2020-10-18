@@ -1,5 +1,5 @@
 {
-    "name": "igonics/database-replacer",
+    "name": "gggordon/php-database-replacer",
     "description": "Replaces Values in SQL Files",
     "license": "MIT",
     "authors": [
@@ -10,16 +10,16 @@
     ],
     "autoload": {
         "psr-0": {
-            "DbSqlReplacer\\": "src/"
+            "PhpSqlReplacer\\": "src/"
         }
     },
     "bin": [
-        "bin/db-sql-replace.php",
-        "bin/db-sql-replace"
+        "bin/php-sql-replace.php",
+        "bin/php-sql-replace"
     ],
     "autoload-dev": {
         "psr-4": {
-            "DbSqlReplacer\\Tests\\": "tests/"
+            "PhpSqlReplacer\\Tests\\": "tests/"
         }
     },
     "require": {},

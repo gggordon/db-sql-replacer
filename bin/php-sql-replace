@@ -17,9 +17,9 @@ $options = getopt("", $longopts);
 
 if(count($options)!=count($longopts)){
     echo <<<EOD
-DB SQL Replacer Usage:
+Php SQL Replacer Usage:
 
-db-sql-replace --input-file-path="./original.sql" --output-file-path="./updated.sql" --match="Original Text" --replace="New Text"
+php-sql-replace --input-file-path="./original.sql" --output-file-path="./updated.sql" --match="Original Text" --replace="New Text"
 
 Replaces all occurrences of a value even in serialized values in a file
 
@@ -36,7 +36,7 @@ EOD;
 require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
 
-$replacer = new \DbSqlReplacer\DbSqlReplacer();
+$replacer = new \PhpSqlReplacer\PhpSqlReplacer();
 echo "Processing\n\n";
 $replacer->replaceValueFromFile(
     $options['input-file-path'],
