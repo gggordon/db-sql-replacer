@@ -72,10 +72,10 @@ phpunit
 
 # Documentation
 
-Documentation Generated using [`phpdoc`](https://www.phpdoc.org/)
+Documentation Generated using [`phpdox`](http://phpdox.de/)
 
 ```
-phpdoc -d ./src -t ./docs/api
+phpdox
 ```
 
 # License
