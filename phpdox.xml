@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpdox xmlns="http://xml.phpdox.net/config">
+  <project name="PHP SQL Replacer" source="${basedir}/src" workdir="${basedir}/build/docs/api/xml">
+    <collector backend="parser" />
+    <generator output="${basedir}/build/docs/api">
+      <enrich base="${basedir}/build/logs">
+        <source type="build" />
+        <source type="git">
+        <history enabled="true" limit="15" />
+        </source>
+        <source type="phpunit">
+          <coverage path="coverage/xml" />
+        </source>
+      </enrich>
+      <build engine="html" output="html"/>
+    </generator>
+  </project>
+</phpdox>
