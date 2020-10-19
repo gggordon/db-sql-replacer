@@ -79,7 +79,7 @@ class PhpSqlReplacer
         
         $matches = [];
         array_walk_recursive($tokens, function ($value) use (&$matches,$patternToMatchFor) {
-            if ($patternToMatchFor==null ||
+            if ($patternToMatchFor===null ||
                        stripos($value, $patternToMatchFor) !== false) {
                 $matches[]=$value;
             }
@@ -115,7 +115,6 @@ class PhpSqlReplacer
                     unserialize($matchReplaced);
                 } catch (\Exception $e) {
                     //silently ignore
-                    $matchReplaced=$match;
                     continue;
                 }
                 $matchReplaced = "'$matchReplaced'";
