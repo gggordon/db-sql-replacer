@@ -8,13 +8,7 @@ use PhpSqlReplacer\Exceptions\SqlReplacerException;
 
 class PhpSqlReplacerTest extends TestCase
 {
-    protected $replacer;
 
-    protected function setup()
-    {
-        parent::setup();
-        $this->replacer = new PhpSqlReplacer();
-    }
     private function getTestFilePath()
     {
         return dirname(__FILE__).'/data/sample.sql';
@@ -23,7 +17,8 @@ class PhpSqlReplacerTest extends TestCase
     public function testEnsureFileExists()
     {
         try {
-            $this->replacer
+            $replacer = new PhpSqlReplacer();
+            $replacer
                  ->extractSqlValuesFromFile($this->getTestFilePath().'wrong');
             $this->assertTrue(false);
         } catch (SqlReplacerException $e) {
@@ -31,7 +26,8 @@ class PhpSqlReplacerTest extends TestCase
         }
         
         try {
-            $this->replacer
+            $replacer = new PhpSqlReplacer();
+            $replacer
                  ->extractSqlValuesFromFile($this->getTestFilePath());
             $this->assertTrue(true);
         } catch (SqlReplacerException $e) {
@@ -43,7 +39,8 @@ class PhpSqlReplacerTest extends TestCase
 
     public function testExtractSqlValuesWithColumnNames()
     {
-        $actualValues = $this->replacer
+        $replacer = new PhpSqlReplacer();
+        $actualValues = $replacer
                              ->extractSqlValuesFromFile(
                                  $this->getTestFilePath(),
                                  null,
@@ -54,7 +51,8 @@ class PhpSqlReplacerTest extends TestCase
 
     public function testExtractSqlValuesWithoutColumnNames()
     {
-        $actualValues = $this->replacer
+        $replacer = new PhpSqlReplacer();
+        $actualValues = $replacer
                              ->extractSqlValuesFromFile(
                                  $this->getTestFilePath()
                               );
@@ -63,13 +61,14 @@ class PhpSqlReplacerTest extends TestCase
 
     public function testExtractSqlValuesFromFileMatchingValue()
     {
-        $actualValues = $this->replacer
+        $replacer = new PhpSqlReplacer();
+        $actualValues = $replacer
                              ->extractSqlValuesFromFile(
                                  $this->getTestFilePath(),
                                  "none"
                               );
         $this->assertEquals(0, count($actualValues));
-        $actualValues = $this->replacer
+        $actualValues = $replacer
                              ->extractSqlValuesFromFile(
                                  $this->getTestFilePath(),
                                  "trading"
@@ -79,8 +78,9 @@ class PhpSqlReplacerTest extends TestCase
 
     public function testReplaceValue()
     {
+        $replacer = new PhpSqlReplacer();
         $contents = file_get_contents($this->getTestFilePath());
-        $updatedContents = $this->replacer
+        $updatedContents = $replacer
                                 ->replaceValue($contents, "trading", "butter");
         $this->assertTrue(strpos($updatedContents, "butter")>-1);
     }
@@ -88,7 +88,8 @@ class PhpSqlReplacerTest extends TestCase
     public function testReplaceValueFromFile()
     {
         $outputFileName = $this->getTestFilePath().'.out';
-        $updatedContents = $this->replacer
+        $replacer = new PhpSqlReplacer();
+        $updatedContents = $replacer
                                 ->replaceValueFromFile(
                                     $this->getTestFilePath(),
                                     "trading",
